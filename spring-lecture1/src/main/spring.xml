@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/util                  http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- 산타페를 정의한다. -->
+	<bean id="santafe" class="kr.ac.kpu.ebiz.spring.lecture1.Santafe">
+	</bean>
+	
+	<!-- 운전수를 정의하고 Santafe와 관계를 설정한다. -->
+	<bean id="driver" class="kr.ac.kpu.ebiz.spring.lecture1.Driver">
+		<property name="car" ref="santafe"/>
+	</bean>
+	
+</beans>
